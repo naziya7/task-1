@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Types of nodes</title>
+</head>
+<body>
+    <h1 id="element">The Element Node</h1>
+      This is a Text Node => Represent text within an Element.
+    <p id="node">paragraph tag => element node</p>
+    <div>Element node</div>
+     <!-- this is a comment node -->
+     <img id="attNode" src="" alt="this is an Attribute Node">
+
+     <script>
+        const nodes = document.body.childNodes;
+        console.log(nodes);
+        const node = document.getElementById("node");
+         for (let i = 0; i < nodes.length; i++) {
+            node.innerHTML += nodes[i].nodeName + "<br>";
+        }
+        const h1= document.getElementById("element");
+        console.log(element.nodeType)
+        console.log(`h1 node type is ${h1.nodeType} and Node Name is ${h1.nodeName}`)
+
+        const p= document.getElementById("node").innerText;
+        console.log(`node type of p is ${p.nodeType} and Node Name is ${p.nodeName}`)
+
+        const img = document.getElementById("attNode");
+        console.log(`node type of img tag is ${img.nodeType} and Node Name is ${img.nodeName}`)
+    //     console.log(nodes[2].nodeType, nodes[2].nodeName)
+    //    console.log(nodes[3].nodeType ,nodes[3].nodeName )
+       
+        </script>
+</body>
+</html>
